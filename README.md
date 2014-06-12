@@ -1,12 +1,20 @@
+[![License](http://img.shields.io/badge/license-MIT-A31F34.svg)](https://github.com/MorganConrad/remodeler)
+[![NPM Downloads](http://img.shields.io/npm/dm/remodeler.svg)](https://www.npmjs.org/package/remodeler)
+
 #remodeler
 
 node.js module to transform objects into new objects, by copying or renaming properties, but
 also allowing for functional transformations.  These are provided via key / transformation pairs.
 
-Key will be the __new key__ in the new object.
+For example, if an outside module is using [Coding by Convention](http://en.wikipedia.org/wiki/Convention_over_configuration), but you just aren't, or can't, use _their_
+convention, this module could be useful in creating a new object meeting that convention.  For more background see [my blog post](http://flyingspaniel.blogspot.com/2014/06/coding-by-convention-is-great.html).
 
-The Transformation may be one of the following:
- *  null:     first, check this.defaultTransformation.  If that is null, do nothing
+This can also be thought of as a quick and dirty [Adapter pattern](http://en.wikipedia.org/wiki/Adapter_pattern).
+
+As for the key / transformation paris, the key will be the __new key__ in the new object.
+
+The transformation may be one of the following:
+ *  null:     first, check this.defaultTransformation.  If that is null, do nothing (ignore this field)
  *  string:   newObject[key] = oldObject[string]   copy from old object, string = oldKey
  *  function: newObject[key] = function(oldObject, key)
 
@@ -73,5 +81,5 @@ map consists of key/value pairs, key = key, value = transformation
 similar to addKeyXformArray, except arguments[0,2,4...] = keys, arguments[1,3,5...] = transformations
 
 ####remodel(src, dst)
-Transforms src into dst based upon current configuration and values.  If dst is null (typical) a new {} will be created and returned.
+Transforms src into dst based upon current configuration and values.  If dst is null (typical) a new {} will be created, added to, and returned.
 
