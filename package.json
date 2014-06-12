@@ -1,0 +1,24 @@
+{
+  "name": "remodeler",
+  "version": "0.0.1",
+  "description": "Tranform object via key changes and functions",
+  "main": "remodeler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MorganConrad/remodeler.git"
+  },
+  "keywords": [
+    "object",
+    "utilities",
+    "adapter",
+    "transform"
+  ],
+  "author": "Morgan Conrad <flyingspaniel@gmail.com> (http://flyingspaniel.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MorganConrad/remodeler/issues"
+  }
+}
