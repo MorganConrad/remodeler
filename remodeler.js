@@ -28,7 +28,7 @@ function Remodeler(options, initMap) {
    this.options = options || {};
    this.xf = {};
    if (initMap)
-      this.addXformMap(initMap);
+      this.addKeyXformMap(initMap);
 }
 
 
