@@ -61,7 +61,7 @@ Constructor.  Usually, options and initMap can be left or or set to null.
 Current options are:
 * `isPassThrough` if true, `remodel()` (see below) will simply return src.
 * `defaultTransformation` Will be used if a specific key Transformation is null.
-
+If initMap is present, addKeyXformMap(initMap) is called.
 
 ####copyKeys(keys)
 the keys (a single String or an array of Strings) will be copied as is.

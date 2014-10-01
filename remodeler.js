@@ -20,7 +20,7 @@
  * @param options  (optional, seldom used) 
  *      isPassThrough - if true, the remodeler does nothing, just returns the original object
  *      defaultTransformation - a default transformation to use if specific one for a key is null
- * @param initMap   optional.  If present will be added via addXformMap 
+ * @param initMap   optional.  If present will be added via addKeyXformMap 
  * @constructor
  */
 function Remodeler(options, initMap) {
@@ -28,7 +28,7 @@ function Remodeler(options, initMap) {
    this.options = options || {};
    this.xf = {};
    if (initMap)
-      this.addXformMap(initMap);
+      this.addKeyXformMap(initMap);
 }
 
 
