@@ -1,6 +1,6 @@
 {
   "name": "remodeler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tranform object via key changes and functions",
   "main": "remodeler.js",
   "scripts": {
